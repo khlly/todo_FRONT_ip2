@@ -39,7 +39,8 @@ export default {
   async mounted() {
     // we will call action fetchTodos
     await this.todoStore.fetchTodos();
-  },
+    //await this.todoStore.removeCompletedTodos(); 
+    },
   computed: {
     ...mapState(useTodoStore, ["todos", "countTodos"]),
     completedTasks() {
